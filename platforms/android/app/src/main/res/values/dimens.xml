@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="homepage_tab_text_size">10dp</dimen>
+    <dimen name="lister_tab_text_size">12dp</dimen>
+</resources>

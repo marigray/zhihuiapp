@@ -1,0 +1,7 @@
+#!/bin/sh
+rm -rf platforms/android/app/src/main/assets/dist/
+rm -rf platforms/android_teacher/app/src/main/assets/dist/
+cp -rfv dist/ platforms/android/app/src/main/assets/
+cp -rfv dist/ platforms/android_teacher/app/src/main/assets/
+
+

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.weex.app">
+
+    <permission
+        android:name="com.zhihuiapp.teacher.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <!--add for WXSdk-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- Required  JPush-->
+    <uses-permission android:name="com.zhihuiapp.student.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <application
+        android:name="com.weex.app.WXApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:overrideLibrary="com.taobao.android.dexposed"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name="com.weex.app.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+        <activity
+            android:name="com.weex.app.WXPageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="com.taobao.android.intent.category.WEEX" />
+
+                <data
+                    android:host="add1"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="add2"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="balance"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="balancedetail"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="bankaccount"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="courseevaluate"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="courselist"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="coursemanage"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="courseorder"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="home"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="message"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="profile"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="publishedlist"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="publish"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="questionnaire"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="questionnaire-list"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="survey"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="material"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="feedback"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="help1"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="setting"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="login"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="coursehistory"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="detail"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register1"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register2"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register3"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="password1"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="password2"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="course-comments"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="course-comments-detail"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="login-eula"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="publish-course"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="course-require"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register-email1"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register-email2"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="register-email3"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="about"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="private-message-detail"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="questionnaire-answer"
+                    android:scheme="zhihuit" />
+                <data
+                    android:host="bindingphone"
+                    android:scheme="zhihuit"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation"/>
+        <activity
+            android:name="com.weex.app.activities.StudentMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zhihuiapp.teacher.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.zhihuiapp.teacher.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.weex.app.activities.SurfaceActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+
+        <!--Add for JPush Begin-->
+
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:theme="@style/MyDialogStyle"
+            android:exported="false">
+        </activity>
+
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.zhihuiapp.teacher" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":pushcore"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 3.0.9 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.zhihuiapp.teacher.DataProvider"
+            android:name="cn.jpush.android.service.DataProvider"
+            android:process=":pushcore"
+            android:exported="false"
+            />
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.zhihuiapp.teacher" />
+            </intent-filter>
+
+        </service>
+        <!-- since 3.1.0 Required SDK 核心功能-->
+        <provider
+            android:authorities="com.zhihuiapp.teacher.DownloadProvider"
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:exported="true"
+            />
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.zhihuiapp.teacher" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name="com.weex.app.receiver.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.zhihuiapp.teacher" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name="com.weex.app.receiver.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.zhihuiapp.teacher"></category>
+            </intent-filter>
+        </receiver>
+
+
+        <!--Add for JPush End-->
+
+
+        <!--// 添加fileProvider配置代码-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.updateFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/update_file_provider" />
+        </provider>
+
+        <!--// 添加Service代码-->
+        <service
+            android:name="com.weex.app.util.upgrade.DownloadService"
+            android:exported="true" />
+
+    </application>
+
+</manifest>
